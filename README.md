@@ -15,4 +15,4 @@ I'm not sure if the executables will work for other platforms, but they definite
 
 If the MakeFile registers errors, the following command will compile the animation (MAC OS X):
 
-$g++ /System/Library/Frameworks/GLUT.framework/GLUT /System/Library/Frameworks/OpenGL.framework/OpenGL main.cpp life.cpp -o animation
+$ g++ /System/Library/Frameworks/GLUT.framework/GLUT /System/Library/Frameworks/OpenGL.framework/OpenGL main.cpp life.cpp -o animation
