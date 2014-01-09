@@ -14,4 +14,5 @@ All modifications to the animation can be made by editing the constants defined 
 I'm not sure if the executables will work for other platforms, but they definitely do for MAC OS X. I will be updating the MakeFile in the future to account for other platforms.
 
 If the MakeFile registers errors, the following command will compile the animation (MAC OS X):
-	g++ /System/Library/Frameworks/GLUT.framework/GLUT /System/Library/Frameworks/OpenGL.framework/OpenGL main.cpp life.cpp -o animation
+
+$g++ /System/Library/Frameworks/GLUT.framework/GLUT /System/Library/Frameworks/OpenGL.framework/OpenGL main.cpp life.cpp -o animation
