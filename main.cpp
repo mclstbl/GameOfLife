@@ -5,8 +5,6 @@
 //  Created by Micaela Estabillo on 2014-01-04.
 //  Copyright (c) 2014 Micaela Estabillo. All rights reserved.
 //
-//g++ /System/Library/Frameworks/GLUT.framework/GLUT /System/Library/Frameworks/OpenGL.framework/OpenGL test.cc -o myGlutApp
-
 
 #include "life.h"
 using namespace std;
