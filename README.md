@@ -1,10 +1,13 @@
 GameOfLife
 http://en.wikipedia.org/wiki/Conway's_Game_of_Life
 =================
+
+
 A C++ implementation of a cellular automaton (Conway Game of Life) which saves computation by only storing locations of live cells in a vector and ignoring all others (dead cells).
 
 The "life" executable is a text version of Game of Life
-"Animation" is an OpenGL animation the same data.
+
+The "animation" executable is an OpenGL animation the same data in "life".
 
 All modifications to the animation can be made by editing the constants defined in the header files life.h and grid.h.
 
