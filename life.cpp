@@ -20,7 +20,6 @@ int find (int x, int y, std::vector<cell> alive) {
 }
 
 void life (std::vector<cell> &alive, int delta) {
-    // std::cout << "Original alive size : " << alive.size() << "\n\n";
     for (int i = 0; i < delta; i ++) {
         std::vector<cell> temp;
         for (int x = 0; x < BOARD_SIZE; x ++) {
@@ -72,11 +71,6 @@ void life (std::vector<cell> &alive, int delta) {
             }
         }
         alive.swap(temp);
-        
-        std::cout << "Alive new size = " << alive.size() << "\n";
-        for (int n = 0; n < alive.size(); n ++) {
-             std::cout << alive[n].x << " " << alive[n].y << "\n";
-        }
     }
 }
 

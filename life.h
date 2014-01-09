@@ -13,7 +13,7 @@
 #include <iostream>
 #include <vector>
 
-#define BOARD_SIZE 10
+#define BOARD_SIZE 100
 #define BOARD_2 BOARD_SIZE * BOARD_SIZE
 #define X_INCREMENT 1
 #define Y_INCREMENT 1
