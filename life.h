@@ -5,7 +5,6 @@
 //  Created by Micaela Estabillo on 2014-01-04.
 //  Copyright (c) 2014 Micaela Estabillo. All rights reserved.
 //
-//g++ /System/Library/Frameworks/GLUT.framework/GLUT /System/Library/Frameworks/OpenGL.framework/OpenGL test.cc -o myGlutApp
 
 
 #ifndef LIFE_H
@@ -26,7 +25,6 @@ struct cell {
 };
 
 int find (int x, int y, std::vector<cell> alive);
-
 void life (std::vector<cell> &alive, int delta);
  
 #endif
