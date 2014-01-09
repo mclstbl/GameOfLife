@@ -5,15 +5,11 @@
 //  Created by Micaela Estabillo on 2014-01-04.
 //  Copyright (c) 2014 Micaela Estabillo. All rights reserved.
 //
-//g++ /System/Library/Frameworks/GLUT.framework/GLUT /System/Library/Frameworks/OpenGL.framework/OpenGL test.cc -o myGlutApp
 
 #include "life.h"
 
-/*
-Get list of live cells, delta
-Check locations
-No graphics here, just the "engine"
-*/
+// only keeps track of live cells
+// all other cells are assumed to be dead
 
 int find (int x, int y, std::vector<cell> alive) {
     for (int i = 0; i < alive.size(); i ++) {
@@ -27,7 +23,7 @@ void life (std::vector<cell> &alive, int delta) {
     // std::cout << "Original alive size : " << alive.size() << "\n\n";
     for (int i = 0; i < delta; i ++) {
         std::vector<cell> temp;
-        for (int x = 0; x < BOARD_SIZE; x ++){
+        for (int x = 0; x < BOARD_SIZE; x ++) {
             for (int y = 0; y < BOARD_SIZE; y ++) {
                 //check if neighbours are found
                 int neighbours = 0;
@@ -36,7 +32,7 @@ void life (std::vector<cell> &alive, int delta) {
                 int t = y - 1;
                 int b = y + 1;
                 //LEFT
-                if (x != 0){
+                if (x != 0) {
                     if (find (l,y,alive) > -1) neighbours ++;
                     //TOPLEFT
                     if (y != 0) {
@@ -48,7 +44,7 @@ void life (std::vector<cell> &alive, int delta) {
                     }
                 }
                 //RIGHT
-                if (x != BOARD_SIZE - 1){
+                if (x != BOARD_SIZE - 1) {
                     if (find (r,y,alive) > -1) neighbours ++;
                     //TOPRIGHT
                     if (y != 0) {
@@ -61,11 +57,11 @@ void life (std::vector<cell> &alive, int delta) {
                     }
                 }
                 //TOP
-                if (y != 0){
+                if (y != 0) {
                     if (find (x,t,alive) > -1) neighbours ++; 
                 }
                 //BOTTOM
-                if (y != BOARD_SIZE - 1){
+                if (y != BOARD_SIZE - 1) {
                     if (find (x,b,alive) > -1) neighbours ++;
                 }
                 if (neighbours == 2 || neighbours == 3) {
@@ -77,11 +73,10 @@ void life (std::vector<cell> &alive, int delta) {
         }
         alive.swap(temp);
         
-         std::cout << "Alive new size = " << alive.size() << "\n";
+        std::cout << "Alive new size = " << alive.size() << "\n";
         for (int n = 0; n < alive.size(); n ++) {
              std::cout << alive[n].x << " " << alive[n].y << "\n";
         }
-        
     }
 }
 
