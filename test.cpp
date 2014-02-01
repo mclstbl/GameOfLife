@@ -24,13 +24,6 @@ int main(int argc, char** argv){
 
     cout << "Enter delta value: ";
     cin >> delta;
-    //delta = 100;
-
-    /*
-    for (int i = 0; i < alive.size(); i ++) {
-        cout << alive[i].x << " " << alive[i].y << "\n";
-    }
-    */
 
     life (alive, delta);
 
